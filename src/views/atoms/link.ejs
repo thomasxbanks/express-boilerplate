@@ -1,0 +1,9 @@
+<a 
+  class="link-<%= style %><%if (restricted == true) { %>-restricted<% } %>" 
+  href="<%= link %>"
+  <%if (restricted == true) { %>
+    onClick="event.preventDefault(); link('/admin');"
+  <% } %>
+>
+  <%= text %>
+</a>

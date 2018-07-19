@@ -1,0 +1,32 @@
+<label class="input-toggle" title="<%= text %>" aria-label="<%= text %>">
+  <input 
+    tabindex="0" 
+    type="checkbox" 
+    name="<%= name %>"
+    data-state="is-pristine" 
+    onfocus="dirty(event)"
+    onblur="validate(event)"
+    <% if (required == true) { %>
+      required
+    <% } %>
+    <% if (checked == true) { %>
+      checked
+    <% } %>
+  >
+  <span class="input-toggle-slider"><%= text %></span>
+  <span class="input-toggle-label">
+    <span class="input-toggle-label-yes">
+      Yes
+    </span>
+    <span class="input-toggle-label-no">
+      No
+    </span>
+  </span>
+  <div 
+    class="input-validation-message"
+    <% if (required == true) { %>
+      data-message-error-required="<%= message.error.required %>"
+    <% } %>
+    data-message-error-invalid="<%= message.error.invalid %>"
+  ></div>
+</label>

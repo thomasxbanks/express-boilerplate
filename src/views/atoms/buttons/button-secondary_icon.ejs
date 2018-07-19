@@ -1,0 +1,10 @@
+<button 
+  class="button-secondary_icon-<%= theme %>" 
+  onClick="<%= action %>"
+  aria-label="<%= text %>"
+  title="<%= text %>"
+  type="<%= type %>"
+>
+  <%= text %>
+  <%- include(site.views + '/icons/' + icon) %>
+</button>

@@ -1,0 +1,8 @@
+
+<form class="search-bar" action="/search" method="POST">
+  <label class="input-minimal input-invert">
+    Search
+    <%- include(site.views + '/atoms/inputs/input-text', input.text) %>
+    <%- include(site.views + '/atoms/buttons/button-icon-only', {type: 'submit', action: false, text: 'Search', icon: 'search', theme: 'dark'}) %>
+  </label>
+</form>

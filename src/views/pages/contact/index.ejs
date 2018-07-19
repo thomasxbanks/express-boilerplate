@@ -1,0 +1,25 @@
+<%- contentFor('hero') %>
+	<%- include(site.views + '/organisms/hero', 
+		{
+			image: {
+				url: {
+					mobile: {
+						small: '/img/midnight-lake-mobile@1x.jpg',
+						large: '/img/midnight-lake-mobile@2x.jpg'
+					},
+					desktop: {
+						small: '/img/midnight-lake-desktop@1x.jpg',
+						large: '/img/midnight-lake-desktop@2x.jpg'
+					}
+				}, 
+				alt: 'A lake at midnight', 
+			},
+			title: 'Contact us', 
+			content: 'Lorem ipsum dolor sit amet' }) %>
+
+<%- contentFor('body') %>
+	<section class="section-theme-light">
+		<div class="grid grid-central">
+			<h3 class="section-title item-12-12">put a form here or something</h3>
+		</div>
+	</section>

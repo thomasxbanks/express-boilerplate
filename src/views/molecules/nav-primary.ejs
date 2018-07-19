@@ -1,0 +1,7 @@
+<nav class="nav-primary">
+  <% site.primaryNavItems.forEach(function(primaryNavItem, index) { %>
+		<%- include(site.views + '/atoms/link', 
+			{link: primaryNavItem.link, text: primaryNavItem.text, style: 'primary-nav', restricted: primaryNavItem.restricted})
+		%>
+  <% }); %>
+</nav>

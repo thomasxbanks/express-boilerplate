@@ -1,0 +1,19 @@
+<header id="masthead" data-conditional="false" data-state="is-visible">
+	
+	<div class="inner masthead-desktop">
+		<a class="companyLogo" href="/"><%- include(site.views + '/icons/logo') %></a>
+		<span class="topbar">
+			<%- include(site.views + '/molecules/nav-primary') %>
+		</span>
+	</div>
+
+	<div class="inner masthead-mobile">
+		<a class="companyLogo" href="/"><%- include(site.views + '/icons/logo') %></a>
+		<span class="icon-nav_container">
+			<%- include(site.views + '/atoms/buttons/button-icon-only', {type: 'button', action: 'openSidebar()', text: 'Toggle the navigation sidebar', icon: 'hamburger', theme: 'light'}) %>
+		</span>
+	</div>
+
+</header>
+
+<%- include(site.views + '/organisms/nav-sidebar') %>

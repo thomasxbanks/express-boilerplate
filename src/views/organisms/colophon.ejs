@@ -1,0 +1,20 @@
+<footer id="site-footer">
+	<div class="inner item-aligned-last-right">
+		<div class="item-4-12">
+
+		</div>
+		<div class="item-4-12">
+			<div id="colophon">&copy; <time><%= locals.site.colophon %></time> <cite><%= locals.site.company.name %></cite>. Company&nbsp;number&nbsp;<%= locals.site.company.companyNumber %></div>
+		</div>
+		<div class="item-4-12">
+			<nav>
+				<ul>
+					<li><a href="/contact">Contact</a></li>
+					<li><a href="/privacy-policy">Privacy</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</footer>
+<%- locals.flash %>
+<%- include(site.views + '/atoms/buttons/button-icon-only', {type: 'button', action: 'link("#top")', text: 'To top', icon: 'arrow', theme: 'dark'}) %>

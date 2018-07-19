@@ -1,0 +1,15 @@
+<nav class="admin-sidebar-nav">
+  <ul>
+    <% items.forEach(function(item, index) { %>
+      <li>
+        <a 
+          href="/<%= item.link %>"
+          data-page="<%= item.slug %>"
+          data-state="<% if (site.page.current == item.slug) { %>is-active<% } %>"
+        >
+          <%= item.text %>
+        </a>
+      </li>
+    <% }); %>
+  </ul>
+</nav>

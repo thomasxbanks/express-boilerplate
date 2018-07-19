@@ -1,0 +1,16 @@
+# Distribution files
+dist
+
+# The dreaded node modules!
+node_modules
+
+# @TODO: Staging server password lockdown
+.htaccess
+.htpasswd
+
+# Local IDE/OS files
+.vscode
+.DS_Store
+
+# Lighthouse output files
+localhost_*

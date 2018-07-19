@@ -1,0 +1,25 @@
+<%- contentFor('hero') %>
+	<%- include(site.views + '/organisms/hero', 
+		{
+			image: {
+				url: {
+					mobile: {
+						small: '/img/midnight-lake-mobile@1x.jpg',
+						large: '/img/midnight-lake-mobile@2x.jpg'
+					},
+					desktop: {
+						small: '/img/midnight-lake-desktop@1x.jpg',
+						large: '/img/midnight-lake-desktop@2x.jpg'
+					}
+				}, 
+				alt: 'A lake at midnight', 
+			},
+			title: site.page.body.title, 
+			content: site.description }) %>
+
+	<%- contentFor('body') %>
+		<section class="section-theme-light">
+			<div class="grid grid-central">
+				<h1 class="section-title">Hello world.</h1>
+			</div>
+		</section>

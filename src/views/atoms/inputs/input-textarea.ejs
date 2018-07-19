@@ -1,0 +1,20 @@
+<textarea
+  name="<%= name %>"
+  type="text" 
+  placeholder="<%= placeholder %>" 
+  maxlength="<%= maxlength %>"
+  tabindex="0"
+  data-state="is-pristine" 
+  onfocus="dirty(event)"
+  onblur="validate(event)"
+  <% if (required == true) { %>
+    required
+  <% } %>
+><% if (value) { %><%= value %><% } %></textarea>
+<div 
+  class="input-validation-message"
+  <% if (required == true) { %>
+    data-message-error-required="<%= message.error.required %>"
+  <% } %>
+  data-message-error-invalid="<%= message.error.invalid %>"
+></div>

@@ -1,0 +1,114 @@
+<%- contentFor('hero') %>
+	<%- include(site.views + '/organisms/hero', 
+		{
+			image: {
+				url: {
+					mobile: {
+						small: '/img/midnight-lake-mobile@1x.jpg',
+						large: '/img/midnight-lake-mobile@2x.jpg'
+					},
+					desktop: {
+						small: '/img/midnight-lake-desktop@1x.jpg',
+						large: '/img/midnight-lake-desktop@2x.jpg'
+					}
+				}, 
+				alt: 'A lake at midnight', 
+			},
+			title: site.title, 
+			content: site.description }) %>
+
+<%- contentFor('body') %>
+	<section data-title="Links" id="styleguide-links">
+		<%- include(site.views + '/atoms/link', {link: '/styleguide', text: 'Primary Nav Link', style: 'primary-nav', restricted: false}) %>
+		<%- include(site.views + '/atoms/link', {link: '/styleguide', text: 'Primary Nav Link (Restricted)', style: 'primary-nav', restricted: true}) %>
+	</section>
+
+	<section data-title="Buttons (Primary)" id="styleguide-buttons-primary">
+		<%- include(site.views + '/atoms/buttons/button-primary', {type: 'button', action: 'log("Primary")', text: 'Primary Button Brand', theme: 'brand'}) %>
+		<%- include(site.views + '/atoms/buttons/button-primary', {type: 'button', action: 'log("Primary")', text: 'Primary Button Dark', theme: 'dark'}) %>
+		<%- include(site.views + '/atoms/buttons/button-primary', {type: 'button', action: 'log("Primary")', text: 'Primary Button Light', theme: 'light'}) %>
+	</section>
+
+	<section data-title="Buttons (Secondary)" id="styleguide-buttons-secondary">
+		<%- include(site.views + '/atoms/buttons/button-secondary', {type: 'button', action: 'log("Secondary")', text: 'Secondary Button Brand', theme: 'brand'}) %>
+		<%- include(site.views + '/atoms/buttons/button-secondary', {type: 'button', action: 'log("Secondary")', text: 'Secondary Button Dark', theme: 'dark'}) %>
+		<%- include(site.views + '/atoms/buttons/button-secondary', {type: 'button', action: 'log("Secondary")', text: 'Secondary Button Light', theme: 'light'}) %>
+	</section>
+
+	<section data-title="Buttons (Secondary with Icon)" id="styleguide-buttons-secondary-icon">
+		<%- include(site.views + '/atoms/buttons/button-secondary_icon', {type: 'button', action: 'log("Secondary with Icon")', text: 'Secondary Button Icon Brand', theme: 'brand', icon: 'arrow'}) %>
+		<%- include(site.views + '/atoms/buttons/button-secondary_icon', {type: 'button', action: 'log("Secondary with Icon")', text: 'Secondary Button Icon Dark', theme: 'dark', icon: 'arrow'}) %>
+		<%- include(site.views + '/atoms/buttons/button-secondary_icon', {type: 'button', action: 'log("Secondary with Icon")', text: 'Secondary Button Icon Light', theme: 'light', icon: 'arrow'}) %>
+	</section>
+
+	<section data-title="Buttons (Icon only)" id="styleguide-buttons-icon-only">
+		<%- include(site.views + '/atoms/buttons/button-icon-only', {type: 'button', action: 'log("log in")', text: 'Log in', icon: 'arrow', theme: 'brand'}) %>
+		<%- include(site.views + '/atoms/buttons/button-icon-only', {type: 'button', action: 'log("share stuff")', text: 'Share something', icon: 'arrow', theme: 'dark'}) %>
+		<%- include(site.views + '/atoms/buttons/button-icon-only', {type: 'button', action: 'log("expand thumbnail")', text: 'Expand the thumbnail', icon: 'arrow', theme: 'light'}) %>
+	</section>
+	
+	<section data-title="Buttons (Ghost)" id="styleguide-buttons-ghost">
+		<%- include(site.views + '/atoms/buttons/button-ghost', {type: 'button', action: 'log("Ghost")', text: 'Ghost Button Brand', theme: 'brand'}) %>
+		<%- include(site.views + '/atoms/buttons/button-ghost', {type: 'button', action: 'log("Ghost")', text: 'Ghost Button Dark', theme: 'dark'}) %>
+		<%- include(site.views + '/atoms/buttons/button-ghost', {type: 'button', action: 'log("Ghost")', text: 'Ghost Button Light', theme: 'light'}) %>
+	</section>
+
+	<section data-title="Teasers" id="styleguide-teasers" class="section-theme-light">
+		<div class="grid grid-central">
+			<h3 class="section-title item-12-12">What's new</h3>
+			<section class="teaser_container item-12-12">
+				<% articles = [
+					{style: 'small', image: {url: 'http://fillmurray.com/300/200', alt: 'Bill Murray'}, title: 'Is Bill Murray better than Nicolas Cage?', content: '', link: '/news-events/bill-murray-better-cage'},
+					{style: 'small', image: {url: 'http://fillmurray.com/300/210', alt: 'Bill Murray'}, title: 'Turning Japanese: Bill Murray on set', content: '', link: '/news-events/lost-in-translation'},
+					{style: 'small', image: {url: 'http://fillmurray.com/300/220', alt: 'Bill Murray'}, title: 'Anecdotes of a legend', content: '', link: '/news-events/anecdotes'},
+					{style: 'small', image: {url: 'http://fillmurray.com/300/230', alt: 'Bill Murray'}, title: 'Is Nicolas Cage better than Bill Murray?', content: '', link: '/news-events/nicolas-cage-better-bill-murray'}
+				] %>
+				<% for (article of articles) { %>
+					<%- include(site.views + '/molecules/teaser', article) %>
+				<% } %>
+			</section>
+		</div>
+	</section>
+	
+	<section data-title="Search Bar" id="styleguide-search-bar">
+		<%- include(site.views + '/atoms/search-bar') %>
+	</section>
+
+	<section data-title="Modal" id="styleguide-modal">
+		<%- include(site.views + '/atoms/buttons/button-primary', {type: 'button', action: 'openModal()', text: 'Open the modal', theme: 'dark'}) %>
+		<%- include(site.views + '/organisms/modal', {status: 'not-active', style: 'default', content: 'Donec dictum hendrerit nisl sed finibus. Vestibulum massa arcu, varius eget efficitur vitae, vulputate eget erat. Ut dignissim faucibus tortor ac suscipit. Quisque eget risus nec libero porta cursus id ac purus. Praesent vel dapibus ante. Vivamus sollicitudin lorem diam, sed pellentesque urna accumsan eu. Ut vel elementum ex, ac volutpat nibh. Aliquam laoreet posuere metus, venenatis ullamcorper mauris aliquet a. Sed tempus metus nec scelerisque tempor. Vivamus dapibus pretium dolor vitae tincidunt.'}) %>
+	</section>
+
+	<section data-title="breadcrumbs" id="styleguide-breadcrumbs">
+		<section class="grid grid-central">
+			<%- include(site.views + '/organisms/breadcrumbs', 
+				{breadcrumbs: [
+					{link: '/', text: 'Home'}, 
+					{link: '/section', text: 'Section'}, 
+					{link: '/slug', text: 'Page'}
+				]}
+			) %>
+		</section>
+	</section>
+
+	<section data-title="Form" id="styleguide-admin-input-form" class="admin">
+		<section class="admin-panel-with-sidebar grid-central">
+				<form action="/" method="post">
+					<%- include(site.views + '/atoms/inputs/input-checkbox-icon', input.checkboxicon) %>
+`					<%- include(site.views + '/atoms/inputs/input-checkbox', input.checkbox) %>
+					<%- include(site.views + '/atoms/inputs/input-date', input.date) %>
+					<%- include(site.views + '/atoms/inputs/input-email', input.email) %>
+					<%- include(site.views + '/atoms/inputs/input-image', input.image) %>
+					<%- include(site.views + '/atoms/inputs/input-number', input.number) %>
+					<%- include(site.views + '/atoms/inputs/input-password', input.password) %>
+					<%- include(site.views + '/atoms/inputs/input-pdf', input.pdf) %>
+					<%- include(site.views + '/atoms/inputs/input-radio', input.radio) %>
+					<%- include(site.views + '/atoms/inputs/input-range', input.range) %>
+					<%- include(site.views + '/atoms/inputs/input-select', input.select) %>
+					<%- include(site.views + '/atoms/inputs/input-text', input.text) %>
+					<%- include(site.views + '/atoms/inputs/input-textarea', input.textarea) %>
+					<%- include(site.views + '/atoms/inputs/input-toggle', input.toggle) %>
+					<%- include(site.views + '/atoms/inputs/input-url', input.url) %>
+				</form>
+		</section>
+	</section>

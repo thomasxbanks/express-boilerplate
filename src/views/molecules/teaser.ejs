@@ -1,0 +1,11 @@
+<article class="teaser teaser-<%= style %>">
+  <header>
+    <a href="<%= link %>">
+      <%- include(site.views + '/atoms/images/image', {url: image.url, alt: image.alt}) %>
+    </a>
+    <h4 class="title"><%= title %></h4>
+  </header>
+  <div class="content">
+    <%= content %>
+  </div>
+</article>

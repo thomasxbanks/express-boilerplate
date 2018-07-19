@@ -1,0 +1,10 @@
+<div class="flash-notification js-flash-notification <%= locals.alert_class %>" aria-live="assertive" data-state="is-active">
+	<%= locals.message %>
+</div>
+<script>
+	let flashNotification = document.querySelector('.js-flash-notification')
+	let duration = 5000
+	setTimeout(()=>{
+		flashNotification.setAttribute('data-state', 'not-active')
+	}, duration)
+</script>

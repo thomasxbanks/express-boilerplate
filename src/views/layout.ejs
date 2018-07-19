@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+	<%- include(site.views + '/_partials/_head') %>
+
+<body 
+	class="<% site.page.body.classes.forEach(function(className, index) { %><%= className %> <% }); %>"
+>
+	<a id="top"></a>
+	<%- include(site.views + '/organisms/masthead') %>
+	<%- hero %>
+
+	<main>
+		<%- body %>
+	</main>
+
+	<%- include(site.views + '/organisms/colophon') %>
+
+	<%- include(site.views + '/_partials/_scripts') %>
+
+</body>
+
+</html>

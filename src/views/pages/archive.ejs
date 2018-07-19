@@ -1,0 +1,36 @@
+<%- contentFor('hero') %>
+	<%- include(site.views + '/organisms/hero', 
+		{
+			image: {
+				url: {
+					mobile: {
+						small: '/img/midnight-lake-mobile@1x.jpg',
+						large: '/img/midnight-lake-mobile@2x.jpg'
+					},
+					desktop: {
+						small: '/img/midnight-lake-desktop@1x.jpg',
+						large: '/img/midnight-lake-desktop@2x.jpg'
+					}
+				}, 
+				alt: 'A lake at midnight', 
+			},
+			title: site.page.body.title, 
+			content: 'Lorem ipsum dolor sit amet' }) %>
+
+<%- contentFor('body') %>
+	<section class="section-theme-light">
+		<div class="grid grid-central">
+			<h3 class="section-title item-12-12">What's new</h3>
+			<section class="teaser_container item-12-12">
+				<% articles = [
+					{style: 'small', image: {url: 'http://fillmurray.com/300/200', alt: 'Bill Murray'}, title: 'Is Bill Murray better than Nicolas Cage?', content: '', link: '/news-events/bill-murray-better-cage'},
+					{style: 'small', image: {url: 'http://fillmurray.com/300/210', alt: 'Bill Murray'}, title: 'Turning Japanese: Bill Murray on set', content: '', link: '/news-events/lost-in-translation'},
+					{style: 'small', image: {url: 'http://fillmurray.com/300/220', alt: 'Bill Murray'}, title: 'Anecdotes of a legend', content: '', link: '/news-events/anecdotes'},
+					{style: 'small', image: {url: 'http://fillmurray.com/300/230', alt: 'Bill Murray'}, title: 'Is Nicolas Cage better than Bill Murray?', content: '', link: '/news-events/nicolas-cage-better-bill-murray'}
+				] %>
+				<% for (article of articles) { %>
+					<%- include(site.views + '/molecules/teaser', article) %>
+				<% } %>
+			</section>
+		</div>
+	</section>

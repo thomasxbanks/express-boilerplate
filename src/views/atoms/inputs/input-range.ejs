@@ -1,0 +1,26 @@
+<span class="description volatility-casual">Casual</span>
+<input
+  id="volatilityRangeInput"
+  name="<%= name %>"
+  value="<%= value %>"
+  class="volatility-range"
+  type="range" 
+  min="<%= min %>"
+  max="<%= max %>"
+  step="<%= step %>"
+  tabindex="0"
+  data-state="is-pristine" 
+  onfocus="dirty(event)"
+  onblur="validate(event)"
+  <% if (required == true) { %>
+    required
+  <% } %>
+>
+<span class="description volatility-aggressive">Aggressive</span>
+<div 
+  class="input-validation-message"
+  <% if (required == true) { %>
+    data-message-error-required="<%= message.error.required %>"
+  <% } %>
+  data-message-error-invalid="<%= message.error.invalid %>"
+></div>

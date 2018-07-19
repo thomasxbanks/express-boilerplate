@@ -1,0 +1,29 @@
+<label class="input-checkbox-icon" title="<%= text %>" aria-label="<%= text %>">
+  <input 
+    tabindex="0" 
+    type="checkbox" 
+    name="<%= name %>"
+    value="<%= value %>"
+    data-state="is-pristine" onfocus="dirty(event)"
+    onfocus="dirty(event)"
+    <% if (required == true) { %>
+      required
+    <% } %>
+    <% if (checked == true) { %>
+      checked
+    <% } %>
+  >
+  <span class="input-checkbox-icon">
+    <%- include(site.views + '/icons/' + icon) %>
+  </span>
+  <span class="input-checkbox-label">
+    <%= text %>
+  </span>
+  <div 
+    class="input-validation-message"
+    <% if (required == true) { %>
+      data-message-error-required="<%= message.error.required %>"
+    <% } %>
+    data-message-error-invalid="<%= message.error.invalid %>"
+  ></div>
+</label>

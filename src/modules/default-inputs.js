@@ -3,7 +3,7 @@ const inputs = {
     checked: false,
     name: 'checkbox-icon',
     value: 'check',
-    icon: 'check',
+    icon: 'logo',
     text: 'Checkbox Label',
     required: false,
     message: {
@@ -16,7 +16,7 @@ const inputs = {
     checked: false,
     name: '',
     value: '',
-    text: '',
+    text: 'Checkbox input',
     required: false,
     message: { error: { invalid: 'Generic error message' } },
   },

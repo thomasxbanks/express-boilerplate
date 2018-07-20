@@ -14,8 +14,8 @@
 				}, 
 				alt: 'A lake at midnight', 
 			},
-			title: site.title, 
-			content: site.description }) %>
+			title: site.page.body.title, 
+			content: 'All of the component elements can be found here' }) %>
 
 <%- contentFor('body') %>
 	<section data-title="Links" id="styleguide-links">
@@ -37,14 +37,14 @@
 
 	<section data-title="Buttons (Secondary with Icon)" id="styleguide-buttons-secondary-icon">
 		<%- include(site.views + '/atoms/buttons/button-secondary_icon', {type: 'button', action: 'log("Secondary with Icon")', text: 'Secondary Button Icon Brand', theme: 'brand', icon: 'arrow'}) %>
-		<%- include(site.views + '/atoms/buttons/button-secondary_icon', {type: 'button', action: 'log("Secondary with Icon")', text: 'Secondary Button Icon Dark', theme: 'dark', icon: 'arrow'}) %>
-		<%- include(site.views + '/atoms/buttons/button-secondary_icon', {type: 'button', action: 'log("Secondary with Icon")', text: 'Secondary Button Icon Light', theme: 'light', icon: 'arrow'}) %>
+		<%- include(site.views + '/atoms/buttons/button-secondary_icon', {type: 'button', action: 'log("Secondary with Icon")', text: 'Secondary Button Icon Dark', theme: 'dark', icon: 'plus'}) %>
+		<%- include(site.views + '/atoms/buttons/button-secondary_icon', {type: 'button', action: 'log("Secondary with Icon")', text: 'Secondary Button Icon Light', theme: 'light', icon: 'check'}) %>
 	</section>
 
 	<section data-title="Buttons (Icon only)" id="styleguide-buttons-icon-only">
-		<%- include(site.views + '/atoms/buttons/button-icon-only', {type: 'button', action: 'log("log in")', text: 'Log in', icon: 'arrow', theme: 'brand'}) %>
-		<%- include(site.views + '/atoms/buttons/button-icon-only', {type: 'button', action: 'log("share stuff")', text: 'Share something', icon: 'arrow', theme: 'dark'}) %>
-		<%- include(site.views + '/atoms/buttons/button-icon-only', {type: 'button', action: 'log("expand thumbnail")', text: 'Expand the thumbnail', icon: 'arrow', theme: 'light'}) %>
+		<%- include(site.views + '/atoms/buttons/button-icon-only', {type: 'button', action: 'log("log in")', text: 'Log in', icon: 'plus', theme: 'brand'}) %>
+		<%- include(site.views + '/atoms/buttons/button-icon-only', {type: 'button', action: 'log("share stuff")', text: 'Share something', icon: 'hamburger', theme: 'dark'}) %>
+		<%- include(site.views + '/atoms/buttons/button-icon-only', {type: 'button', action: 'log("expand thumbnail")', text: 'Expand the thumbnail', icon: 'close', theme: 'light'}) %>
 	</section>
 	
 	<section data-title="Buttons (Ghost)" id="styleguide-buttons-ghost">

@@ -8,7 +8,7 @@
     position: absolute;
     left: -50000px;
     &:checked+.input-checkbox-check {
-      .icon {
+      svg {
         transform: none;
       }
     }
@@ -20,8 +20,7 @@
     @extend %button-icon-only-small;
     @extend %input-border;
     @extend %dead-center;
-    .icon {
-      font-size: 1rem;
+    svg {
       transform: scale(0);
       transition: transform $ease-swoosh $speed-fast;
     }
@@ -42,7 +41,6 @@
     position: relative;
     left: -50000px;
     &:checked+.input-checkbox-icon {
-      background: $clr_black;
       svg {
         transform: none;
       }

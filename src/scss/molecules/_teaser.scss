@@ -1,23 +1,26 @@
 %teaser {
   display: inline-block;
   vertical-align: top;
-  padding: 1.5rem 0;
+  @extend %card;
+  @extend %padding-bottom;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
+
 .teaser_container {
   @extend %central-column;
   font-size: 0;
-  .teaser_container-column {
-    @extend %grid;
-    @extend %grid_row;
-    @extend %grid_wrap;
-    @extend %align-stretch;
-    @extend %justify-between;
-    width: 100%;
-  }
+  @extend %grid;
+  @extend %grid_row;
+  @extend %grid_wrap;
+  @extend %align-stretch;
+  @extend %justify-between;
+  width: 100%;
   @media screen and (min-width: $breakpoint-min) {
     display: flex;
   }
 }
+
 .teaser {
   @extend %teaser;
   img {
@@ -26,19 +29,10 @@
     margin: 0;
     padding: 0;
   }
-  .title {
-    margin-top: 1em;
-  }
+  .title,
   .content {
     margin-top: 1em;
-  }
-}
-
-.teaser-large {
-  width: 100%;
-  img {
-    height: 10rem;
-    object-fit: cover;
+    @extend %padding-horizontal;
   }
   .title {
     @extend %christopher;
@@ -46,30 +40,26 @@
   .content {
     @extend %richie;
   }
+}
+
+.teaser-large {
+  width: 100%;
+  img {
+    height: 25rem;
+    object-fit: cover;
+  }
   @media screen and (min-width: $breakpoint-min) {
-    width: calc(100% - 3rem);
-    img {
-      height: 25rem;
-    }
+    width: calc(50rem - 3rem);
   }
 }
 
 .teaser-small {
-  width: calc(50% - 0.5rem);
+  width: calc(100% - 0.5rem);
   img {
-    height: 4rem;
+    height: 20rem;
     object-fit: cover;
   }
-  .title {
-    @extend %richie;
-  }
-  .content {
-    display: none;
-  }
   @media screen and (min-width: $breakpoint-min) {
-    width: calc(50% - 0.75rem);
-    img {
-      height: 12.5rem;
-    }
+    width: calc(25rem - 0.75rem);
   }
 }

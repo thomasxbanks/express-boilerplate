@@ -45,5 +45,12 @@ module.exports = {
     console.log('Request URL:', req.url);
     console.log('Request Body:', req.body);
     console.log('Site page:', site.page);
+
+    var randomNumber = ~~(Math.random() * 100);
+    req.flash({
+      type: randomNumber % 2 === 0 ? 'success' : 'failure',
+      message: `${randomNumber} is ${randomNumber % 2 === 0 ? 'even' : 'odd'}`,
+      redirect: false,
+    });
   },
 };

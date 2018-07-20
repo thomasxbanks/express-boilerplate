@@ -1,4 +1,12 @@
 const inputs = {
+  checkbox: {
+    checked: false,
+    name: '',
+    value: '',
+    text: 'Checkbox input',
+    required: false,
+    message: { error: { invalid: 'Generic error message' } },
+  },
   checkboxicon: {
     checked: false,
     name: 'checkbox-icon',
@@ -11,14 +19,6 @@ const inputs = {
         invalid: 'You done fucked up, son!',
       },
     },
-  },
-  checkbox: {
-    checked: false,
-    name: '',
-    value: '',
-    text: 'Checkbox input',
-    required: false,
-    message: { error: { invalid: 'Generic error message' } },
   },
   date: {
     name: '',
@@ -76,7 +76,7 @@ const inputs = {
     checked: false,
     name: '',
     value: '',
-    text: '',
+    text: 'Radio button',
     required: false,
     message: { error: { invalid: 'Generic error message' } },
   },
